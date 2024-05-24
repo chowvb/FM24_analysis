@@ -1,0 +1,1 @@
+https://mewteebee.medium.com/making-data-driven-decisions-in-football-manager-how-i-use-python-and-postgresql-to-manage-my-dd48ac271b57
