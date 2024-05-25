@@ -3,7 +3,7 @@ import pandas as pd
 from bs4 import BeautifulSoup
 
 # Open data file 
-with open("Untitled.html") as file:
+with open("data.html") as file:
     # Parse html
     soup = BeautifulSoup(file, "html.parser")
 
