@@ -1,6 +1,9 @@
 Name - Name
-Position - Position
+BEST POS - Best Position
 Age - Age
+HEIGHT - Player Height 
+WAGE - Weekly Wage 
+EXPIRES - Contract Expiry Date
 Transfer Value - Transfer Value
 ACC - Acceleration
 WOR - Work Rate

@@ -7,3 +7,16 @@ FM allows you to copy and paste squad data from the "Squad" screen where you can
 Each of the players individual attributes will also be saved into a html file to conduct analysis on judging the ability of the current squad and new players to scout and sign. 
 At the start of each of the season sections below I'll briefly summarise the team performance in all competition, important results that occured within the season, what formations were used - how successful they were, as well as what formations we were weak against. (This information can be found in the data tab within the game, I will try to include snapshots of each of these.)  
 ## Season 23/24
+### Formation
+For this save I decided to choose a 4-2-3-1 (2DM) formation taking inspiration from the Liverpool squad back in 08/09 season when the red's were managed by Rafa Benitez, with some minor modifications to the system. Rafa tended to use a more attacking left full back and a defensive right back. In this system to utilise the ability of Trent Alexander-Arnold I decided to utilise two attacking full backs, to balance the change in the right hand side of the pitch, I made the right sided Centre Defensive a more defensive role to allow Trent to roam forward.  ![4-2-3-1 (2DM) Used for the 2023/2024 Season!](images/starting_formation.PNG)
+### January Transfer Window 
+At the start of the January transfer window after pulling a 7 point gap at the top of the Premier League, the key objective of this window was to improve the squad depth within the midfield. A injury ravaged first 6 months where at one point there were 8 first team players unavailable, reinforcements were desperately needed.
+#### Paulo Dybala
+After scouting Europe Paulo Dybala popped up on the radar, the 30 Year old had a release clause of £10.5m which seems like a bargin price for todays market. This signing had very little analysis behind and was purely decided on by the price tag of the player. In terms of how he fits into the squad he would be utilised as a squad player who could slit into the number 10 position (AMC) or as a deputy striker. A good option to have as the first 6 months of this save has been ravaged by injuries across the squad. 
+#### Xaver Schlager 
+A 26 Year-old Defensive Midfielder, similar to Dybala, Schlager had little analysis into the decision to bring him to the club other than he also had a relatively low release clause. For Schlager his release clause was £30m, which again is a bargin for the age and the ability of the player. In terms of how he fits into the system, he would likely slot into the left of the two defensive midfielders alongside Mac Allister, meaning that unfortunately Endo will have to take up a squad role going forward.  
+### Season Summary
+A quadruple! We finished the first season winning every trophy available. In the Premier League we won the title with one game to spare, after crafting a 10 point lead by the end of January, a rocky Febuary with one defeat and two draws allowed the nearby teams to catch up. 
+### Post-Season Analysis
+#### Contract Renewals
+#### Transfer Strategy 
