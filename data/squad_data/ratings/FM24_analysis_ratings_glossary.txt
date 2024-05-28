@@ -1,0 +1,50 @@
+Name - Name
+Position - Position
+Age - Age
+Transfer Value - Transfer Value
+ACC - Acceleration
+WOR - Work Rate
+VIS - Vision
+THR - Throwing
+TEC - Technique
+TEA - Teamwork
+TCK - Tackling
+STR - Strength 
+STA - Samina
+TRO - Rushing Out (Tendancy)
+REF - Reflexes
+PUN - Punching (Tendancy)
+POS - Positioning
+PEN - Penalty Taking 
+PAS - Passing
+PAC - Pace 
+1V1 - One on Ones
+OTB - Off the Ball
+NAT - Natural Fitness
+MAR - Marking
+LTH - Long Throws
+LON - Long Shots
+LDR - Leadership 
+KIC - Kicking
+JUM - Jumping Reach
+HEA - Heading
+HAN - Handling
+FRE - Free Kicks
+FLA - Flair
+FIR - First Touch
+FIN - Finishing
+ECC - Eccentricity
+DRI - Dribbling
+DET - Determination
+DEC - Decisions 
+CRO - Crossing
+COR - Corners
+CNT - Composure
+COM - Communication
+CMD - Command Of Area 
+BRA - Bravery
+BAL - Balance
+ANT - Anticipation 
+AGI - Agility
+AGG - Aggression
+AER - Aerial Reach 

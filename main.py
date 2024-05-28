@@ -12,3 +12,6 @@ df = pd.read_html(str(soup))
 
 # filter for first row (Containing dataframe)
 df = df[0]
+no_apps_filter = df["Apps"].str.contains("-")
+
+filtered_df = df[~no_apps_filter]
