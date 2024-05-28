@@ -1,0 +1,77 @@
+'Name' - Player Name
+'Best Pos' - Players best position
+'Aer A/90' - Aerial Challenges Attempted per 90 Minutes
+'Apps' - Appearances
+'Ast' - Assists
+'Asts/90' - Assists per 90 minutes
+'Av Rat' - Average rating
+'CCC' - Chances Created
+'Ch C/90' - Chances Created Per 90 Minutes
+'Clean Sheets' - Clean Sheets
+'Con/90' - Conceded Per 90 Minutes
+'Conc'- Goals Conceded 
+'Cr A' - Crosses Attempted
+'Cr C' - Crosses Completed
+'Cr C/A' - Corss Completion Ratio
+'D' - Games Drawn
+'Dist/90' - Distance Covered per 90 Minutes
+'Distance' - Distance Covered
+'Drb' - Dribbles Made
+'DrbPG' - Dribbles Made Per game
+'FA' - Fouls Against
+'Fls' - Fouls Made
+'G. Mis' - Games Missed In A Row
+'Gl Mst' - Mistakes Leading To Goal
+'Gls' - Goals
+'Gls/90' - Goals per 90 minutes
+'Gwin' - Game Win Ratio
+'Hdr %' - Headers Won Ratio
+'Hdrs'- Headers Won
+'Hdrs A' - Headers Attempted
+'Hdrs W/90' - Headers Won Per 90 Minutes
+'Int/90' - Interceptions Per 90 Minutes
+'Itc' - Interceptions
+'K Hdrs' - Key Headers
+'K Pas' - Key Passes
+'K Ps/90' - Key Passes Per 90 Minutes
+'K Tck' - Number of Key Tackles
+'Last C' - Minutes Since Last Conceded
+'Last Gl' - Minutes Since Last Goals
+'Lost' - Games Lost
+'Mins' - Minutes played
+'Mins/Gl' - Average Minutes Per Goal
+'Mins/Gm' - Minutes Per Game
+'Off' - Offsides
+'Pas %' - Pass Completion Ratio
+'Pas A' - Passes Attempted
+'Pen/R' - Penalties Scored Ratio
+'Pens' - Penalties Taken
+'Pens Faced' - Penalties Faced
+'Pens S' - Penalties Scored
+'Pens Saved' - Penalties Saved
+'Pens Saved Ratio' - Penalties Saved Ratio
+'PoM' - Player of the Match
+'Ps A/90' - Passes Attempted Per 90 Minutes
+'Ps C' - Passes Completed
+'Ps C/90' - Passes Completed Per 90 Minutes
+'Pts/Gm' - Points Won Per Game
+'Red' - Red Cards
+'ShT' - Shots On Target
+'ShT/90' - Shots On Targer Per 90 Minutes
+'Shot %' - Shots On Target Ratio
+'Shot/90' - Shots Per 90 Minutes
+'Shots' - Shots
+'Starts' - Number of Games in the Starting XI
+'Sv %' - Save Ratio
+'Svh' - Saves Held
+'Svp' - Saves Parried
+'Svt' - Saves Tipped
+'Tck' - Tackles per game
+'Tck A' - Tackles Attempted
+'Tck R' - Tackle Completion Ratio
+'Tck W' - Tackles Completed
+'Tgls' - Team Goals
+'Won' - Games Won
+'Yel' - Yellow Cards
+'xG' - Expected Goals
+'xSv %' - Expected Save Percentage
