@@ -1,5 +1,10 @@
 'Name' - Player Name
 'Best Pos' - Players best position
+'Age' - Age
+'Height' - Player Height
+'Wage' - Weekly Wage 
+'Expires' - Contract Expiry Date
+'Transfer Value' - Transfer Value
 'Aer A/90' - Aerial Challenges Attempted per 90 Minutes
 'Apps' - Appearances
 'Ast' - Assists
