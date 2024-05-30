@@ -1,6 +1,10 @@
-import pandas 
 import matplotlib.pyplot as plt
+from matplotlib.widgets import Cursor
 import math 
+import mplcursors
+import mpld3
+from mpld3 import plugins
+from post_season_analysis import season_stats_updated_df
 """
 Args - 
     df - Dataframe 
@@ -9,7 +13,7 @@ Args -
 """
 def scatter_plot_default(df, col1_name, col2_name):
     # Define plot style
-    with plt.style.context("dark_background"):
+    with plt.style.context("classic"):
         
         # Create subplots
         fig, ax = plt.subplots()
@@ -30,16 +34,34 @@ def scatter_plot_default(df, col1_name, col2_name):
         plt.grid(which = "major", alpha = 0.2)
 
         # Plot the scatter points
-        ax.scatter(df[col1_name], df[col2_name])
+        points = ax.scatter(df[col1_name], df[col2_name])
 
-        # Iterate through the names to label each of the data points
+        """# Iterate through the names to label each of the data points
         for i, name in enumerate(df["Name"].tolist()):
             ax.annotate(name, (df[col1_name][i], df[col2_name][i]),
-                        ha = "left", va = "center_baseline")
+                        ha = "left", va = "center_baseline")"""
         
         # Set the x/y axis label names to the name of the columns
         plt.xlabel(col1_name)
         plt.ylabel(col2_name)
-    
+
+        # Add an interactive cursor to show players when mouse is hovered over data point (on python image viewer)
+        mplcursors.cursor(hover = True).connect("add", lambda sel: sel.annotation.set_text(df["Name"].tolist()[sel.index]))
+
+
+        # Add interactive tooltips using mpld3
+        labels = df["Name"].tolist()
+        tooltip = plugins.PointLabelTooltip(points, labels=labels)
+        plugins.connect(fig, tooltip)
+
     # Show the plot
-    plt.show()
+    #plt.show()
+    #mpld3.show()
+
+    # Save html code to a variable to print and copy and paste into html file later
+    text = mpld3.fig_to_html(fig, figid = "fig1")
+    
+    # Print html code
+    #print(text)
+
+scatter_plot_default(season_stats_updated_df, "Pas A", "Pas %")
