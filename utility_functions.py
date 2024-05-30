@@ -13,7 +13,23 @@ def get_player_stats():
     # Filter for the first row (Containing dataframe)
     df = df[0]
 
-    return df
+    keys_to_change = ["Cr C/A", "Gwin", "Hdr %", "Pas %", "Pen/R", 
+                      "Pens Saved Ratio", "Shot %", "Sv %", "Tck R",
+                      "xSv %"]
+    # Cleaning player data for analysis and data visualisation 
+    def percent_clean(stats_df, list):
+        for i, key in enumerate(list):
+            key_values = stats_df[key].tolist()
+            for i, percent in enumerate(key_values):
+                change = percent.replace("%", "")
+                key_values[i] = change
+            stats_df[key] = key_values
+        return stats_df
+    
+    new_df = percent_clean(df, keys_to_change)
+    return new_df
+
+    
 
 # get_player_attributes() returns the current squads attributes as a dataframe
 def get_player_attributes():
