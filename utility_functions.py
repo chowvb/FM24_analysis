@@ -5,7 +5,7 @@ import os
 # get_player_stats() returns the current squads attributes as a dataframe
 def get_player_stats():
     # Open data file
-    with open("data/squad_data/stats/player_stats_23-24.html") as file:
+    with open("data/squad_data/stats/player_stats_23-24.html", "r", encoding = "utf-8") as file:
         # Parse HTML
         soup = BeautifulSoup(file, "html.parser")
     # Read soup as a dataframe
