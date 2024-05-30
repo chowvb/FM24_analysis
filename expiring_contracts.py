@@ -47,3 +47,5 @@ position_list = squad_stats["Best Pos"].tolist()
 for i, position in enumerate(position_list):
     new_position = position.replace("(", "").replace(")", "").replace(" ", "")
     position_list[i] = new_position
+
+squad_stats["Best Pos"] = position_list
