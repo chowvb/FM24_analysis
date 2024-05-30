@@ -21,9 +21,10 @@ def get_player_stats():
         for i, key in enumerate(list):
             key_values = stats_df[key].tolist()
             for i, percent in enumerate(key_values):
-                change = percent.replace("%", "")
+                change = percent.replace("%", "").replace("-", "0")
                 key_values[i] = change
             stats_df[key] = key_values
+            stats_df[key] = pd.to_numeric(stats_df[key])
         return stats_df
     
     new_df = percent_clean(df, keys_to_change)
