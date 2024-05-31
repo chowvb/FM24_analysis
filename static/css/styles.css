@@ -10,6 +10,7 @@ body {
     width: 200px;
     background-color: #f4f4f4;
     padding-top: 20px;
+    padding: 16px;
     position: fixed;
     height: 100%;
     overflow: auto;
@@ -18,7 +19,6 @@ body {
 .sidebar a {
     display: block;
     color: black;
-    padding: 16px;
     text-decoration: none;
 }
 
@@ -36,7 +36,7 @@ body {
     width: calc(100% - 200px);
     position: fixed;
     top: 0;
-    left: 200px;
+    left: 230px;
     box-sizing: border-box;
 }
 
@@ -49,5 +49,17 @@ body {
     margin-left: 220px;
     padding: 80px 20px 20px 20px; /* Adjusted padding to avoid overlap with header */
     flex-grow: 1;
+    text-align: left;
+}
+
+.text_left {
+    margin-left: 240px;
+    flex-grow: 1;
+    text-align: left;
+    float: left;
+}
+.text_right {
+    flex-grow: 1;
     text-align: center;
+    float: right;
 }
