@@ -49,4 +49,5 @@ body {
     margin-left: 220px;
     padding: 80px 20px 20px 20px; /* Adjusted padding to avoid overlap with header */
     flex-grow: 1;
+    text-align: center;
 }
