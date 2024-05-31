@@ -1,6 +1,5 @@
 import pandas as pd
 from bs4 import BeautifulSoup
-import os
 
 # get_player_stats() returns the current squads attributes as a dataframe
 def get_player_stats():
@@ -13,8 +12,8 @@ def get_player_stats():
     # Filter for the first row (Containing dataframe)
     df = df[0]
 
-    keys_to_change = ["Cr C/A", "Gwin", "Hdr %", "Pas %", "Pen/R", 
-                      "Pens Saved Ratio", "Shot %", "Sv %", "Tck R",
+    keys_to_change = ["Clean Sheets","Con/90", "Cr C/A", "Gwin", "Hdr %", "Pas %", "Pen/R", 
+                      "Pens Saved Ratio", "Shot %", "Sv %", "Tck" ,"Tck R",
                       "xSv %"]
     # Cleaning player data for analysis and data visualisation 
     def percent_clean(stats_df, list):
@@ -28,6 +27,28 @@ def get_player_stats():
         return stats_df
     
     new_df = percent_clean(df, keys_to_change)
+
+    def standardise_appearance(stats_df):
+        apps_list = stats_df["Apps"].tolist()
+        for i, apps in enumerate(apps_list):
+            change = apps.replace("(", " ").replace(")", "")
+            try:
+                starts, subs = change.split(" ", 1)
+                appearances = int(starts) + int(subs)
+            except:
+                appearances = int(change)
+            
+            apps_list[i] = appearances
+        return apps_list
+    
+    new_df["Apps"] = standardise_appearance(df)
+
+    keys = new_df.columns.tolist()
+    for key in keys:
+        try:
+            new_df[key] = pd.to_numeric(new_df[key])
+        except:
+            pass
     return new_df
 
     

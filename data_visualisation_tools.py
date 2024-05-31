@@ -4,14 +4,14 @@ import math
 import mplcursors
 import mpld3
 from mpld3 import plugins
-from post_season_analysis import season_stats_updated_df
+
 """
 Args - 
     df - Dataframe 
     col1_name - Name of dataframe column you want for x axis (Must be a string)
     col2_name - Name of dataframe column you want for y axis (Must be a string)
 """
-def scatter_plot_default(df, col1_name, col2_name):
+def scatter_plot_default(df, col1_name, col2_name, interactive = False):
     # Define plot style
     with plt.style.context("classic"):
         
@@ -36,26 +36,28 @@ def scatter_plot_default(df, col1_name, col2_name):
         # Plot the scatter points
         points = ax.scatter(df[col1_name], df[col2_name])
 
-        """# Iterate through the names to label each of the data points
-        for i, name in enumerate(df["Name"].tolist()):
-            ax.annotate(name, (df[col1_name][i], df[col2_name][i]),
-                        ha = "left", va = "center_baseline")"""
-        
         # Set the x/y axis label names to the name of the columns
         plt.xlabel(col1_name)
         plt.ylabel(col2_name)
 
-        # Add an interactive cursor to show players when mouse is hovered over data point (on python image viewer)
-        mplcursors.cursor(hover = True).connect("add", lambda sel: sel.annotation.set_text(df["Name"].tolist()[sel.index]))
+        if interactive == True:
+            # Add an interactive cursor to show players when mouse is hovered over data point (on python image viewer)
+            mplcursors.cursor(hover = True).connect("add", lambda sel: sel.annotation.set_text(df["Name"].tolist()[sel.index]))
 
 
-        # Add interactive tooltips using mpld3
-        labels = df["Name"].tolist()
-        tooltip = plugins.PointLabelTooltip(points, labels=labels)
-        plugins.connect(fig, tooltip)
+            # Add interactive tooltips using mpld3
+            labels = df["Name"].tolist()
+            tooltip = plugins.PointLabelTooltip(points, labels=labels)
+            plugins.connect(fig, tooltip)
+        else:
+            # Iterate through the names to label each of the data points
+            for i, name in enumerate(df["Name"].tolist()):
+                ax.annotate(name, (df[col1_name][i], df[col2_name][i]),
+                            ha = "left", va = "center")
+        
 
     # Show the plot
-    #plt.show()
+    plt.show()
     #mpld3.show()
 
     # Save html code to a variable to print and copy and paste into html file later
@@ -63,5 +65,3 @@ def scatter_plot_default(df, col1_name, col2_name):
     
     # Print html code
     #print(text)
-
-scatter_plot_default(season_stats_updated_df, "Pas A", "Pas %")
