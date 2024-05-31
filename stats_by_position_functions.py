@@ -7,7 +7,7 @@ GK_stats = ["Name", "Age", "Apps", "Av Rat", "Clean Sheets", "Conc", "Con/90", "
 
 # Center Defencive Stats
 DC_stats = ["Name", "Age", "Apps", "Av Rat", "Mins", "Mins/Gm", "Gls", "Ast", "Fls", "Gl Mst", "Gls", 
-            "Hdr %", "Hdrs W", "Hdrs A", "Hdrs W/90", "K Hdrs", "Aer A/90", "Itc", "Int/90", "K Tck", 
+            "Hdr %", "Hdrs", "Hdrs A", "Hdrs W/90", "K Hdrs", "Aer A/90", "Itc", "Int/90", "K Tck", 
             "Pas %", "Ps C/90", "Tck", "Tck A", "Tck W", "Tck R", "Yel", "Red"]
 
 # Fullback/Wingback stats

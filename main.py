@@ -1,17 +1,10 @@
 # Import packages
-import pandas as pd
-from bs4 import BeautifulSoup
+import markdown
 
-# Open data file 
-with open("data.html") as file:
-    # Parse html
-    soup = BeautifulSoup(file, "html.parser")
+with open("README.md", "r") as f:
+    tempMD = f.read()
 
-# read html as a dataframe
-df = pd.read_html(str(soup))
+tempHTML = markdown.markdown(tempMD)
 
-# filter for first row (Containing dataframe)
-df = df[0]
-no_apps_filter = df["Apps"].str.contains("-")
-
-filtered_df = df[~no_apps_filter]
+with open("index.html", "w") as f:
+    f.write(tempHTML)
