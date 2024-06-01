@@ -62,13 +62,15 @@ body {
 
 .text_left {
     margin-left: 240px;
+    padding: 80px 20px 20px 20px;
     flex-grow: 1;
     text-align: left;
     float: left;
     max-width: 50%;
-    border-right: 1px solid grey;
+    border-right: 3px solid grey;
     
 }
+
 .text_right {
     flex-grow: 1;
     text-align: left;
@@ -79,8 +81,10 @@ body {
     text-align: left;
     float: center;
 }
-.img {
+
+#img {
     margin-right: 50px;
+    text-align: right;
     float: right;
     width: 25%;
     height: 25%;
