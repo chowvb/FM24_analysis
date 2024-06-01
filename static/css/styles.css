@@ -49,7 +49,15 @@ body {
     margin-left: 220px;
     padding: 80px 20px 20px 20px; /* Adjusted padding to avoid overlap with header */
     flex-grow: 1;
-    text-align: left;
+    text-size-adjust: 15px;
+}
+
+.grid {
+    display: grid;
+    align-items: center;
+    grid-template-columns: 1fr 1fr;
+    column-gap: 5px;
+    flex-grow: 1;
 }
 
 .text_left {
@@ -57,9 +65,23 @@ body {
     flex-grow: 1;
     text-align: left;
     float: left;
+    max-width: 50%;
+    border-right: 1px solid grey;
+    
 }
 .text_right {
     flex-grow: 1;
-    text-align: center;
+    text-align: left;
     float: right;
+}
+
+#fig_el694023528539545768794100289 {
+    text-align: left;
+    float: center;
+}
+.img {
+    margin-right: 50px;
+    float: right;
+    width: 25%;
+    height: 25%;
 }
