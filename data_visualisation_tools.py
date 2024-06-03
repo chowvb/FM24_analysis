@@ -49,6 +49,11 @@ def scatter_plot_default(df, col1_name, col2_name, interactive = False):
             labels = df["Name"].tolist()
             tooltip = plugins.PointLabelTooltip(points, labels=labels)
             plugins.connect(fig, tooltip)
+            # Save html code to a variable to print and copy and paste into html file later
+            text = mpld3.fig_to_html(fig, figid = "fig1")
+    
+            # Print html code
+            print(text)
         else:
             # Iterate through the names to label each of the data points
             for i, name in enumerate(df["Name"].tolist()):
@@ -60,8 +65,4 @@ def scatter_plot_default(df, col1_name, col2_name, interactive = False):
     plt.show()
     #mpld3.show()
 
-    # Save html code to a variable to print and copy and paste into html file later
-    text = mpld3.fig_to_html(fig, figid = "fig1")
     
-    # Print html code
-    #print(text)
