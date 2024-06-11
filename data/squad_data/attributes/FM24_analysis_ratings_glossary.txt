@@ -42,7 +42,8 @@ DET - Determination
 DEC - Decisions 
 CRO - Crossing
 COR - Corners
-CNT - Composure
+CNT - Concentration
+CMP - Composure
 COM - Communication
 CMD - Command Of Area 
 BRA - Bravery
