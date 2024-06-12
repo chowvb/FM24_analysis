@@ -1,8 +1,10 @@
+# Import modules 
 import pandas as pd
 import utility_functions as uf
 import stats_by_position_functions as spf
 from data_visualisation_tools import scatter_plot_default 
 from IPython.display import display
+
 # Using the utility function get_player_stats() to load player stats dataframe
 season_stats_df = uf.get_player_stats()
 

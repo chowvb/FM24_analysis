@@ -17,38 +17,73 @@ def get_player_stats():
                       "xSv %"]
     # Cleaning player data for analysis and data visualisation 
     def percent_clean(stats_df, list):
+
+        # Enumerate through the list 
         for i, key in enumerate(list):
+
+            # Store the keys into a list
             key_values = stats_df[key].tolist()
+
+            # Enumerate through the key values
             for i, percent in enumerate(key_values):
+
+                # Remove the % sign and empty values with a zero
                 change = percent.replace("%", "").replace("-", "0")
+
+                # Replace the key values at the same position with the new change
                 key_values[i] = change
+
+            # Replace the keys with the new key_values list
             stats_df[key] = key_values
+
+            # Convert all the new data values to numeric from string.
             stats_df[key] = pd.to_numeric(stats_df[key])
+
+        # Return the new stats dataframe 
         return stats_df
     
+    # Call the percent clean function to amend values
     new_df = percent_clean(df, keys_to_change)
 
+    # Create a function to combine starting appearances and substitute appearances together.
     def standardise_appearance(stats_df):
+
+        # Enumerate through the apps list 
         apps_list = stats_df["Apps"].tolist()
+
+        # Enumerate through the appearance list
         for i, apps in enumerate(apps_list):
+
+            # Replace the brackets with a space
             change = apps.replace("(", " ").replace(")", "")
+
+            # Try and combine sub appearances and appearances together
             try:
                 starts, subs = change.split(" ", 1)
                 appearances = int(starts) + int(subs)
+            
+            # Except if a player has started every game they've played.
             except:
                 appearances = int(change)
             
+            # Replace the old appearance with the new appearance at the same position in the apps list 
             apps_list[i] = appearances
+
+        # Return the appended apps list.
         return apps_list
     
+    # Call the function to normalise player appearances.
     new_df["Apps"] = standardise_appearance(df)
 
+    # Attempt to change the columns from strings to numeric values.
     keys = new_df.columns.tolist()
     for key in keys:
         try:
             new_df[key] = pd.to_numeric(new_df[key])
         except:
             pass
+
+    # Return the altered dataframe
     return new_df
 
     
@@ -104,7 +139,7 @@ def clean_player_positions(df):
     # Return the updated dataframe
     return df
 
-
+# Created a dictionary for the different attributes required for roles and duties in FM24
 role_and_duty_dict = {
 
     # Attributes for Goalkeeper Roles
@@ -458,6 +493,8 @@ role_and_duty_dict = {
     }
 }
 
+
+# Created a attribute multiplier for different positions
 attribute_weightings = {
     "Attribute" : ["Cor", "Cro", "Dri", "Fin", "Fir", "Fre", "Hea", "Lon", "L Th", "Mar", "Pas", "Pen", "Tck", "Tec", "Agg", "Ant", "Bra", "Cmp", "Cnt", "Dec", "Det", "Fla", "Ldr", "OtB", "Pos", "Tea", "Vis", "Wor", "Acc", "Agi", "Bal", "Jum", "Nat", "Pac", "Sta", "Str", "Aer", "Cmd", "Com", "Ecc", "Han", "Kic", "1v1", "Pun", "Ref", "TRO", "Thr"],
     "GK" : [0,0,0,0,1,0,1,0,0,0,3,0,0,1,0,3,6,2,6,10,0,0,2,0,5,2,1,1,6,8,2,1,0,3,1,4,6,6,5,0,8,5,4,0,8,0,3],
