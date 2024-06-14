@@ -93,3 +93,43 @@ body {
     text-size-adjust: 15px;
     text-align: left;
 }
+
+.footer{
+    margin-top: 100px;
+    background-color: #333;
+    color: #fff;
+    padding: 20px;
+}
+
+.right {
+    float: right;
+}
+
+
+/* The following css code is for experimenting on a new layout for the website, HTML code is in templates/testing*/
+
+.flex{
+    display: flex;
+}
+
+.flex-1 {
+    flex: 1;
+}
+
+.justify-left {
+    justify-content: left;
+}
+
+.justify-right {
+    justify-content: right;
+}
+
+.img {
+    width: 250px;
+    height: 250px;
+    margin-left: 100px;
+}
+
+.analysis {
+    margin-top: 20px;
+}
